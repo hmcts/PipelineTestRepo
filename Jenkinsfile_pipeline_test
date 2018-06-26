@@ -7,16 +7,8 @@ properties([
 
 library "Infrastructure@${params.LIB_VERSION}"
 
-<<<<<<< HEAD
 withNightlyPipeline('crossBrowser') {
 
     env.TEST_URL = 'https://div-pfe-saat.service.core-compute-saat.internal'
 
 }
-=======
-withNightlyPipeline('crossBrowser','saat') {
-  
-        env.TEST_URL = 'https://div-pfe-saat.service.core-compute-saat.internal'
-
-}
->>>>>>> bc7c070b820a5284a0e0da3eff0340b34e185de7

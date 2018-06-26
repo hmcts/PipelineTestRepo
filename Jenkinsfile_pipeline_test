@@ -11,3 +11,4 @@ withPerformanceTest('custard', 'recipe-backend', 'saat') {
     before('performancetest') {
         env.TEST_URL = 'https://custard-recipe-backend-saat-staging.service.core-compute-saat.internal'
     }
+}

@@ -1,0 +1,15 @@
+#!groovy
+
+// execute nightly at 11:00 PM
+properties([
+        pipelineTriggers([cron('H 23 * * *')])
+])
+
+// parameters are: product, component, environment
+withPerformanceTest('div', 'pfe', 'aat') {
+
+    // Set target URL
+    before('performancetest') {
+        env.TEST_URL = 'https://div-pfe-aat.service-compute-aat.internal/'
+    }
+}

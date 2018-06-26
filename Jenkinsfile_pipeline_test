@@ -7,8 +7,8 @@ properties([
 
 library "Infrastructure@${params.LIB_VERSION}"
 
-withPerformanceTest('custard', 'recipe-backend', 'saat') {
-    before('performancetest') {
-        env.TEST_URL = 'https://custard-recipe-backend-saat-staging.service.core-compute-saat.internal'
-    }
+withNightlyPipeline('crossBrowser') {
+
+    env.TEST_URL = 'https://div-pfe-saat.service.core-compute-saat.internal'
+
 }

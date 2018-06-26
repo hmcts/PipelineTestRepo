@@ -7,8 +7,8 @@ properties([
 
 library "Infrastructure@${params.LIB_VERSION}"
 
-withPerformanceTest('div', 'pfe', 'saat') {
-    before('performancetest') {
+withNightlyPipeline('crossBrowser', 'pfe', 'saat') {
+  
         env.TEST_URL = 'https://div-pfe-saat.service.core-compute-saat.internal'
-    }
+
 }

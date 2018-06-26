@@ -1,15 +1,13 @@
 #!groovy
 
-// execute nightly at 11:00 PM
 properties([
-        pipelineTriggers([cron('H 23 * * *')])
+        parameters([string(name: 'LIB_VERSION', defaultValue: 'master', description: 'Branch name of pipeline library to use')]),
+        //pipelineTriggers([cron('* * * * *')])
 ])
 
-// parameters are: product, component, environment
-withPerformanceTest('div', 'pfe', 'aat') {
+library "Infrastructure@${params.LIB_VERSION}"
 
-    // Set target URL
+withPerformanceTest('custard', 'recipe-backend', 'saat') {
     before('performancetest') {
-        env.TEST_URL = 'https://div-pfe-aat.service-compute-aat.internal/'
+        env.TEST_URL = 'https://custard-recipe-backend-saat-staging.service.core-compute-saat.internal'
     }
-}

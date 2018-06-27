@@ -1,6 +1,6 @@
 const supportedBrowsers = require('../crossbrowser/supportedBrowsers.js');
 
-const browser = process.env.SAUCELABS_BROWSER || 'chrome_win_latest';
+const browser = 'chrome_win_latest';
 const tunnelName = process.env.TUNNEL_IDENTIFIER || '';
 
 function getDesiredCapabilities() {

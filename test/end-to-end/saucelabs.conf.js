@@ -1,6 +1,6 @@
 const supportedBrowsers = require('../crossbrowser/supportedBrowsers.js');
 
-const browser = process.env.SAUCELABS_BROWSER || 'chrome';
+const browser = process.env.SAUCELABS_BROWSER || 'chrome_win_latest';
 const tunnelName = process.env.TUNNEL_IDENTIFIER || '';
 
 const setupConfig = {
@@ -9,8 +9,8 @@ const setupConfig = {
   'timeout': 20000,
   'helpers': {
     WebDriverIO: {
-      url: process.env.E2E_FRONTEND_URL || 'https://localhost:8080',
-      browser: chrome,
+      url: process.env.TEST_URL || 'https://localhost:8080',
+      browser: supportedBrowsers[browser].browserName,
       waitforTimeout: 60000,
       smartWait: 5000,
       cssSelectorsEnabled: 'true',

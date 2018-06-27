@@ -17,7 +17,7 @@ echo
 for i in "${browsersArray[@]}"
 do
     echo "*** Testing $i ***"
-    SAUCELABS_BROWSER=$i TUNNEL_IDENTIFIER=saucelabs-overnight-tunnel yarn test-crossbrowser-e2e --reporter mochawesome --reporter-options reportFilename="${i}_report",reportDir="${outputDirectory}"
+    SAUCELABS_BROWSER=$i TUNNEL_IDENTIFIER=reformtunnel yarn test-crossbrowser-e2e --reporter mochawesome --reporter-options reportFilename="${i}_report",reportDir="${outputDirectory}"
 
     exitStatus=$?
     if [ $exitStatus -ne 0 ]; then

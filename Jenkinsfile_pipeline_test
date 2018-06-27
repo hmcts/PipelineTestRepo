@@ -10,5 +10,13 @@ library "Infrastructure@${params.LIB_VERSION}"
 withNightlyPipeline('crossBrowser') {
 
     env.TEST_URL = 'https://div-pfe-saat.service.core-compute-saat.internal'
+    env.E2E_CROSSBROWSER_OUTPUT_DIR = "${env.JENKINS_HOME}/reports/divorce/overnight-crossbrowser"
+    env.npm_config_tmp = "${pwd()}/.tmp"
+    env.jurisdiction = env_vars().get('divorce_flag_jurisdiction')
+    env.TUNNEL_IDENTIFIER = 'saucelabs-overnight-tunnel'
+    env.FEATURE_TOGGLE_API_URL = feature_toggle_api_url()
+    env.E2E_FRONTEND_NODE_ENV = 'production'
+    env.SAUCELABS_BROWSER = 'chrome'
+
 
 }

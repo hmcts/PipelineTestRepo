@@ -10,7 +10,7 @@ const setupConfig = {
   'helpers': {
     WebDriverIO: {
       url: process.env.E2E_FRONTEND_URL || 'https://localhost:8080',
-      browser: chrome_win_latest,
+      browser: chrome,
       waitforTimeout: 60000,
       smartWait: 5000,
       cssSelectorsEnabled: 'true',

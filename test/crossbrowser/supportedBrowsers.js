@@ -1,13 +1,4 @@
 const supportedBrowsers = {
-  // 'ie8': {
-  //     'browserName': 'internet explorer',
-  //     'name': 'IE_8',
-  //     'platform': 'Windows 7',
-  //     'ignoreZoomSetting': true,
-  //     'nativeEvents': false,
-  //     'ignoreProtectedModeSettings': true,
-  //     'version': '8'
-  // },
   'ie9_win7': {
     'browserName': 'internet explorer',
     'name': 'IE9_Win7',

@@ -1,14 +1,7 @@
 const supportedBrowsers = require('../crossbrowser/supportedBrowsers.js');
 
-const browser = 'chrome_win_latest';
+const browser = process.env.SAUCELABS_BROWSER || 'chrome_win_latest';
 const tunnelName = process.env.TUNNEL_IDENTIFIER || '';
-
-function getDesiredCapabilities() {
-  let desiredCapability = supportedBrowsers[browser];
-  desiredCapability.tunnelIdentifier = tunnelName;
-  desiredCapability.tags = ['divorce'];
-  return desiredCapability;
-}
 
 const setupConfig = {
   'tests': './paths/**/basicDivorce.js',
@@ -16,7 +9,7 @@ const setupConfig = {
   'timeout': 20000,
   'helpers': {
     WebDriverIO: {
-      url: process.env.E2E_FRONTEND_URL || 'https://localhost:8080',
+      url: process.env.TEST_URL || 'https://localhost:8080',
       browser: supportedBrowsers[browser].browserName,
       waitforTimeout: 60000,
       smartWait: 5000,
@@ -59,5 +52,12 @@ const setupConfig = {
   },
   'name': 'frontEnd Tests'
 };
+
+function getDesiredCapabilities() {
+  let desiredCapability = supportedBrowsers[browser];
+  desiredCapability.tunnelIdentifier = tunnelName;
+  desiredCapability.tags = ['divorce'];
+  return desiredCapability;
+}
 
 exports.config = setupConfig;

@@ -7,7 +7,7 @@ const supportedBrowsers = {
     'nativeEvents': false,
     'ignoreProtectedModeSettings': true,
     'version': '9'
-  },
+  }/*,
   'ie10_win7': {
     'browserName': 'internet explorer',
     'name': 'IE10_Win7',
@@ -153,7 +153,7 @@ const supportedBrowsers = {
   //     'name': 'ANDROID6-0_CHROME',
   //     'platformVersion': '6.0',
   //     'platformName': 'Android'
-  // }
+  // }*/
 };
 
 

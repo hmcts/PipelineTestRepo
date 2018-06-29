@@ -7,10 +7,14 @@ properties([
 
 library "Infrastructure@${params.LIB_VERSION}"
 
-String[] nightlyPipelineTests = ['crossBrowser', 'PerformanceTest'];
+String product = "Divorce"
+
+String component = "frontend"
+
+def nightlyPipeline = ['crossBrowser', 'PerformanceTest']
 
 
-withNightlyPipeline(nightlyPipelineTests) {
+withNightlyPipeline(nightlyPipeline,product,component) {
 
     env.TEST_URL = 'https://div-pfe-saat.service.core-compute-saat.internal'
     env.SAUCE_ACCESS_KEY='e0067992-049e-412c-9d15-2566a28cfb73'

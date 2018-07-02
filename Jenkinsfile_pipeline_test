@@ -11,7 +11,7 @@ String product = "Divorce"
 
 String component = "frontend"
 
-def nightlyPipeline = ['crossBrowser', 'PerformanceTest']
+def nightlyPipeline = ['crossBrowserTest', 'PerformanceTest']
 
 
 withNightlyPipeline(nightlyPipeline,product,component) {

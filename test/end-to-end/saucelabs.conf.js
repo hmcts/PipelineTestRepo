@@ -1,6 +1,6 @@
 const supportedBrowsers = require('../crossbrowser/supportedBrowsers.js');
 
-const browser = process.env.SAUCELABS_BROWSER || 'chrome_win_latest';
+const browser = process.env.SAUCELABS_BROWSER || 'ie9_win7';
 const tunnelName = process.env.TUNNEL_IDENTIFIER || '';
 
 const setupConfig = {

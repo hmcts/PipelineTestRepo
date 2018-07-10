@@ -2,7 +2,7 @@
 
 properties([
         parameters([string(name: 'LIB_VERSION', defaultValue: 'master', description: 'Branch name of pipeline library to use')]),
-        //pipelineTriggers([cron('* * * * *')])
+        pipelineTriggers([cron('*/15 * * * *')])
 ])
 
 library "Infrastructure@${params.LIB_VERSION}"
@@ -20,5 +20,4 @@ withNightlyPipeline(type,product,component) {
     env.SAUCE_USERNAME='divorce'
     enableCrossBrowserTest()
     enablePerformanceTest()
-
 }

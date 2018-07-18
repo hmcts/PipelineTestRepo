@@ -12,13 +12,14 @@ String product = "div"
 String component = "pfe"
 
 def type = "nodejs"
-environment {
-    SAUCE_ACCESS_KEY = credentials('SAUCE_ACCESS_KEY')
-}
 
-echo "sauce labs access key $SAUCE_ACCESS_KEY"
 
 withNightlyPipeline(type,product,component) {
+    environment {
+        SAUCE_ACCESS_KEY = credentials('SAUCE_ACCESS_KEY')
+    }
+
+    echo "sauce labs access key $SAUCE_ACCESS_KEY"
 
 
     env.TEST_URL = 'https://www.apply-divorce.service.gov.uk'

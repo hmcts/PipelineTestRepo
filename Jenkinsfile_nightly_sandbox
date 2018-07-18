@@ -16,7 +16,7 @@ environment {
     SAUCE_ACCESS_KEY = credentials('SAUCE_ACCESS_KEY')
 }
 
-echo "sauce labs access key ${SAUCE_ACCESS_KEY}"
+echo "sauce labs access key $SAUCE_ACCESS_KEY"
 
 withNightlyPipeline(type,product,component) {
 

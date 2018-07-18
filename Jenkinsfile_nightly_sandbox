@@ -16,10 +16,12 @@ def type = "nodejs"
 
 withNightlyPipeline(type,product,component) {
     environment {
-        env.SAUCE_ACCESS_KEY = credentials('COSMOSDB_TOKEN_KEY')
+        env.SAUCE_ACCESS_KEY = credentials('SAUCE_ACCESS_KEY')
+        env.SAUCE_USERNAME = credentials('SAUCE_USERNAME')
+
     }
 
-    echo "sauce labs access key ${env.SAUCE_ACCESS_KEY}"
+    //echo "sauce labs access key ${env.SAUCE_ACCESS_KEY}"
 
 
     env.TEST_URL = 'https://www.apply-divorce.service.gov.uk'

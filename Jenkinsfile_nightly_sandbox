@@ -17,8 +17,8 @@ withNightlyPipeline(type,product,component) {
 
 
 
-    env.SAUCE_ACCESS_KEY=${SAUCE_ACCESS_KEY}
-    env.SAUCE_USERNAME=${SAUCE_USERNAME}
+    env.SAUCE_ACCESS_KEY='${SAUCE_ACCESS_KEY}'
+    env.SAUCE_USERNAME='${SAUCE_USERNAME}'
 
     echo "sauce labs access key' ${env.SAUCE_ACCESS_KEY}"
     echo "sauce labs access key' ${env.SAUCE_USERNAME}"

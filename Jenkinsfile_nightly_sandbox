@@ -13,23 +13,28 @@ String component = "pfe"
 
 def type = "nodejs"
 
+withCredentials([
+        [$class: 'StringBinding', credentialsId: 'SAUCE_ACCESS_KEY', variable: 'SAUCE_ACCESS_KEY'],
+        [$class: 'StringBinding', credentialsId: 'SAUCE_USERNAME', variable: 'SAUCE_USERNAME'],
+]) {
 
-withNightlyPipeline(type,product,component) {
-    environment {
-        env.SAUCE_ACCESS_KEY = credentials('SAUCE_ACCESS_KEY')
-        env.SAUCE_USERNAME = credentials('SAUCE_USERNAME')
+    withNightlyPipeline(type, product, component) {
+        environment {
+            env.SAUCE_ACCESS_KEY = credentials('SAUCE_ACCESS_KEY')
+            env.SAUCE_USERNAME = credentials('SAUCE_USERNAME')
+
+        }
+        echo "enviromental sauce key is ${env.SAUCE_ACCESS_KEY}"
+        echo "environmental sauce username ${env.SAUCE_USERNAME}"
+
+        env.TEST_URL = 'https://www.apply-divorce.service.gov.uk'
+
+        sauce('10aeedfd-cfcc-4b27-ad26-afe5fe673ce7') {
+            sauceconnect(options: '', useGeneratedTunnelIdentifier: false, verboseLogging: false) {
+                enableCrossBrowserTest()
+            }
+        }
+        enablePerformanceTest()
 
     }
-
-    //echo "sauce labs access key ${env.SAUCE_ACCESS_KEY}"
-
-
-    env.TEST_URL = 'https://www.apply-divorce.service.gov.uk'
-        sauce('${env.SAUCE_ACCESS_KEY}') { // <2>
-        sauceconnect(options: '', useGeneratedTunnelIdentifier: false, verboseLogging: false) { // <3>
-        enableCrossBrowserTest()
-       }
-    }
-    enablePerformanceTest()
 }
-

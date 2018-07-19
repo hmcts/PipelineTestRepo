@@ -25,8 +25,11 @@ withNightlyPipeline(type,product,component) {
 
 
     env.TEST_URL = 'https://www.apply-divorce.service.gov.uk'
-
-    enableCrossBrowserTest()
+        sauce('${env.SAUCE_ACCESS_KEY}') { // <2>
+        sauceconnect(options: '', useGeneratedTunnelIdentifier: false, verboseLogging: false) { // <3>
+        enableCrossBrowserTest()
+       }
+    }
     enablePerformanceTest()
 }
 

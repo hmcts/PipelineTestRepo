@@ -13,27 +13,13 @@ String component = "pfe"
 
 def type = "nodejs"
 
-withCredentials([
-        [$class: 'StringBinding', credentialsId: 'SAUCE_ACCESS_KEY', variable: 'SAUCE_ACCESS_KEY'],
-        [$class: 'StringBinding', credentialsId: 'SAUCE_USERNAME', variable: 'SAUCE_USERNAME'],
-]) {
-
     withNightlyPipeline(type, product, component) {
-        environment {
-            env.SAUCE_ACCESS_KEY = credentials('SAUCE_ACCESS_KEY')
-            env.SAUCE_USERNAME = credentials('SAUCE_USERNAME')
-
-        }
-        echo "enviromental sauce key is ${env.SAUCE_ACCESS_KEY}"
-        echo "environmental sauce username ${env.SAUCE_USERNAME}"
-
+        
         env.TEST_URL = 'https://www.apply-divorce.service.gov.uk'
-
-        sauce('10aeedfd-cfcc-4b27-ad26-afe5fe673ce7') {
-            sauceconnect(options: '', useGeneratedTunnelIdentifier: false, verboseLogging: false) {
-                enableCrossBrowserTest()
-            }
-        }
+       env.SAUCE_ACCESS_KEY='e0067992-049e-412c-9d15-2566a28cfb73'
+        env.SAUCE_USERNAME='divorce'
+        
+         enableCrossBrowserTest()
         enablePerformanceTest()
 
     }

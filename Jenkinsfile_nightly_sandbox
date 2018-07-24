@@ -20,5 +20,5 @@ def type = "nodejs"
         enableCrossBrowserTest()
         enablePerformanceTest()
 
-    }
+    
 }

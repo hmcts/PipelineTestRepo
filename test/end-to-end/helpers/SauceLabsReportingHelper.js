@@ -25,4 +25,8 @@ module.exports = function() {
     exec(updateSauceLabsResult('false', sessionId));
 
   });
+  event.dispatcher.on(event.all.result, () => {
+    let sessionId = container.helpers('WebDriverIO').browser.requestHandler.sessionID;
+    console.log('SauceOnDemandSessionID=' + sessionId + ' job-name=PipelineTestRepo');
+  });
 };

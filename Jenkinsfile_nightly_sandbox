@@ -19,7 +19,6 @@ def type = "nodejs"
         enableCrossBrowserTest()
         enableMutationTest()
         enablePerformanceTest()
+        enableFullFunctionalTest()
 
-
-    
-}
+    }

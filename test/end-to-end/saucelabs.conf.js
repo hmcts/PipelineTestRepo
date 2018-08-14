@@ -57,7 +57,6 @@ function getDesiredCapabilities() {
   let desiredCapability = supportedBrowsers[browser];
   desiredCapability.tunnelIdentifier = tunnelName;
   desiredCapability.tags = ['divorce'];
-  desiredCapability.proxy.httpProxy = 'proxyout.reform.hmcts.net:8080';
   return desiredCapability;
 }
 

@@ -17,5 +17,6 @@ def type = "nodejs"
         env.TEST_URL = 'https://div-pfe-aat.service.core-compute-aat.internal'
         enableCrossBrowserTest()
         enablePerformanceTest()
+        enableZapSecurityTest()
 
     }

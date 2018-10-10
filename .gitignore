@@ -25,4 +25,4 @@ package-lock.json
 .sonar/
 .env
 functional-output/
-security-reports/
+security-reports/*

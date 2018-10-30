@@ -15,6 +15,7 @@ def type = "nodejs"
 
     withNightlyPipeline(type, product, component) {
         env.TEST_URL = 'https://div-pfe-aat.service.core-compute-aat.internal'
+        env.CONTEXT = 'snlcontext.context'
         enableCrossBrowserTest()
         enablePerformanceTest()
         enableZapSecurityTest()

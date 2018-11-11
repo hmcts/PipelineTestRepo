@@ -1,2 +1,2 @@
 #!/bin/bash
-echo 'I have been executed from shell"
+echo "I have been executed from shell"

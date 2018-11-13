@@ -9,6 +9,7 @@ do
      sleep .1
 done
  echo "ZAP has successfully started"
+ chmod +x security.context
  ls -la
  pwd
  cp ./security.context /root/.ZAP_D/contexts/security.context

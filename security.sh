@@ -9,6 +9,8 @@ do
      sleep .1
 done
  echo "ZAP has successfully started"
+ ls -la
+ pwd
  cp ./security.context /root/.ZAP_D/contexts/security.context
  zap-cli --zap-url http://0.0.0.0 -p 1001 status -t 120
  zap-cli --zap-url http://0.0.0.0 -p 1001 open-url "${TEST_URL}"

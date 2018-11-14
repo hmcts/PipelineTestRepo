@@ -1,0 +1,35 @@
+#!groovy
+
+properties([
+        parameters([string(name: 'LIB_VERSION', defaultValue: 'master', description: 'Branch name of pipeline library to use')]),
+        pipelineTriggers([cron('15 01 * * *')])
+])
+
+library "Infrastructure@${params.LIB_VERSION}"
+
+String product = "div"
+
+String component = "pfe"
+
+def type = "nodejs"
+
+List<LinkedHashMap<String, Object>> secrets = [
+        secret('securitycontext', 'SECURITYCONTEXT'),
+]
+
+static LinkedHashMap<String, Object> secret(String secretName, String envVar) {
+    [ $class: 'AzureKeyVaultSecret',
+      secretType: 'Secret',
+      name: secretName,
+      version: '',
+      envVariable: envVar
+    ]
+}
+
+    withNightlyPipeline(type, product, component) {
+        loadVaultSecrets(secrets)
+        setVaultName('probate-saat') 
+        env.TEST_URL = 'https://div-pfe-aat.service.core-compute-aat.internal'
+        enableSecurityScan()
+
+    }

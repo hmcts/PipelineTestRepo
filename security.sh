@@ -12,7 +12,7 @@ done
  chmod +x security.context
  ls -la
  pwd
- cp ./security.context /root/.ZAP_D/contexts/
+ cp -f ./security.context /root/.ZAP_D/contexts
  zap-cli --zap-url http://0.0.0.0 -p 1001 status -t 120
  zap-cli --zap-url http://0.0.0.0 -p 1001 open-url "${TEST_URL}"
  zap-cli --zap-url http://0.0.0.0 -p 1001 context import security.context

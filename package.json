@@ -34,7 +34,8 @@
     "test-all": "NODE_ENV=testing LOG_LEVEL=OFF yarn run test:coverage && yarn run test:a11y && yarn run test:nsp",
     "sonar-scanner": "node_modules/sonar-scanner/bin/sonar-scanner",
     "lint": "NODE_PATH=. eslint .",
-    "test:fullfunctional": "echo this is for full functional tests"
+    "test:fullfunctional": "echo this is for full functional tests",
+    "install": "echo nothing to install"
 
   },
   "pre-commit": [

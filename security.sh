@@ -1,6 +1,6 @@
 #!/bin/bash
 echo "I have been executed from shell"
-echo "${SECURITYCONTEXT}" > /zap/wrk/security.context
+echo "${SECURITYCONTEXT}" > /zap/security.context
 ls
 i=0
 while !(curl -s http://0.0.0.0:1001) > /dev/null
@@ -12,7 +12,7 @@ done
  ls -la /zap/wrk/
  zap-cli --zap-url http://0.0.0.0 -p 1001 status -t 120
  zap-cli --zap-url http://0.0.0.0 -p 1001 open-url "${TEST_URL}"
- zap-cli --zap-url http://0.0.0.0 -p 1001 context import /zap/wrk/security.context
+ zap-cli --zap-url http://0.0.0.0 -p 1001 context import /zap/security.context
  zap-cli --zap-url http://0.0.0.0 -p 1001 spider ${TEST_URL}
  zap-cli --zap-url http://0.0.0.0 -p 1001 active-scan --scanners all --recursive "${TEST_URL}"
  zap-cli --zap-url http://0.0.0.0 -p 1001 report -o activescan.html -f html

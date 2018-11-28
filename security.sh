@@ -3,6 +3,7 @@ echo "I have been executed from shell"
 echo "${SECURITYCONTEXT}" > /zap/security.context
 ls
 i=0
+zap-x.sh -d -host 0.0.0.0 -port 1001 -config api.disablekey=true -config scanner.attackOnStart=true -config view.mode=attack -config connection.dnsTtlSuccessfulQueries=-1 -config api.addrs.addr.name=.* -config api.addrs.addr.regex=true /dev/null 2>&1 &
 while !(curl -s http://0.0.0.0:1001) > /dev/null
 do
      i=$(( (i+1) %4 ))

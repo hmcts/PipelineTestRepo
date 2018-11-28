@@ -1,12 +1,13 @@
 #!/bin/bash
-echo "${SECURITYCONTEXT}" > /zap/security.context
 if [ $UID -eq 0 ]; then
   user=$1
   dir=$2
+  shift 2 
   cd "$dir"
   exec su "zap" "$0" "$@"
 fi
-
+echo "This will be run from user $UID"
+echo "${SECURITYCONTEXT}" > /zap/security.context
 zap-x.sh -d -host 0.0.0.0 -port 1001 -config api.disablekey=true -config scanner.attackOnStart=true -config view.mode=attack -config connection.dnsTtlSuccessfulQueries=-1 -config api.addrs.addr.name=.* -config api.addrs.addr.regex=true /dev/null 2>&1 &
 i=0
 while !(curl -s http://0.0.0.0:1001) > /dev/null

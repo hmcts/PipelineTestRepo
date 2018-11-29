@@ -1,10 +1,7 @@
 #!/bin/bash
 if [ $UID -eq 0 ]; then
   user=$1
-  dir=$2
-  shift 2 
-  cd "$dir"
-  exec su "zap" "$0" "$@"
+  exec su "zap"
 fi
 echo "This will be run from user $UID"
 echo "${SECURITYCONTEXT}" > /zap/security.context

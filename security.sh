@@ -1,11 +1,5 @@
 #!/bin/bash
-if [ $UID -eq 0 ]; then
-  user=$1
-  exec su "zap"
-fi
-echo "This will be run from user $UID and user id is $id"
 echo "${SECURITYCONTEXT}" > /zap/security.context
-cd /zap
 zap-x.sh -d -host 0.0.0.0 -port 1001 -config api.disablekey=true -config scanner.attackOnStart=true -config view.mode=attack -config connection.dnsTtlSuccessfulQueries=-1 -config api.addrs.addr.name=.* -config api.addrs.addr.regex=true /dev/null 2>&1 &
 i=0
 while !(curl -s http://0.0.0.0:1001) > /dev/null
@@ -20,6 +14,7 @@ done
  zap-cli --zap-url http://0.0.0.0 -p 1001 spider ${TEST_URL}
  zap-cli --zap-url http://0.0.0.0 -p 1001 active-scan --scanners all --recursive "${TEST_URL}"
  zap-cli --zap-url http://0.0.0.0 -p 1001 report -o activescan.html -f html
+ 
  # zap-cli --zap-url http://0.0.0.0 -p 1001 ajax-spider ${TEST_URL}
  # zap-cli --zap-url http://0.0.0.0 -p 1001 report -o ajaxspider.html -f html
  echo 'Changing owner from $(id -u):$(id -g) to $(id -u):$(id -u)'

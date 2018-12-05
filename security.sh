@@ -1,20 +1,20 @@
 #!/bin/bash
 echo "${SECURITYCONTEXT}" > /zap/security.context
-zap-x.sh -d -host 0.0.0.0 -port 1001 -config api.disablekey=true -config scanner.attackOnStart=true -config view.mode=attack -config connection.dnsTtlSuccessfulQueries=-1 -config api.addrs.addr.name=.* -config api.addrs.addr.regex=true /dev/null 2>&1 &
-i=0
-while !(curl -s http://0.0.0.0:1001) > /dev/null
-do
-     i=$(( (i+1) %4 ))
-     sleep .1
-done
- echo "ZAP has successfully started"
- zap-cli --zap-url http://0.0.0.0 -p 1001 status -t 120
- zap-cli --zap-url http://0.0.0.0 -p 1001 open-url "${TEST_URL}"
- zap-cli --zap-url http://0.0.0.0 -p 1001 context import /zap/security.context
- zap-cli --zap-url http://0.0.0.0 -p 1001 spider ${TEST_URL}
- zap-cli --zap-url http://0.0.0.0 -p 1001 active-scan --scanners all --recursive "${TEST_URL}"
- zap-cli --zap-url http://0.0.0.0 -p 1001 report -o activescan.html -f html
- zap-full-scan.py -d -a -r report2.html -t "${TEST_URL}"
+# zap-x.sh -d -host 0.0.0.0 -port 1001 -config api.disablekey=true -config scanner.attackOnStart=true -config view.mode=attack -config connection.dnsTtlSuccessfulQueries=-1 -config api.addrs.addr.name=.* -config api.addrs.addr.regex=true /dev/null 2>&1 &
+# i=0
+# while !(curl -s http://0.0.0.0:1001) > /dev/null
+# do
+#     i=$(( (i+1) %4 ))
+#     sleep .1
+# done
+# echo "ZAP has successfully started"
+# zap-cli --zap-url http://0.0.0.0 -p 1001 status -t 120
+# zap-cli --zap-url http://0.0.0.0 -p 1001 open-url "${TEST_URL}"
+# zap-cli --zap-url http://0.0.0.0 -p 1001 context import /zap/security.context
+# zap-cli --zap-url http://0.0.0.0 -p 1001 spider ${TEST_URL}
+# zap-cli --zap-url http://0.0.0.0 -p 1001 active-scan --scanners all --recursive "${TEST_URL}"
+# zap-cli --zap-url http://0.0.0.0 -p 1001 report -o activescan.html -f html
+  zap-full-scan.py -d -a -r report2.html -t "${TEST_URL}"
  # su -s /bin/bash zap 
  # echo $(whoami)
  # zap-cli --zap-url http://0.0.0.0 -p 1001 ajax-spider ${TEST_URL}

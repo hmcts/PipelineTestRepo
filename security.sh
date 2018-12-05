@@ -14,7 +14,7 @@ echo "${SECURITYCONTEXT}" > /zap/security.context
 # zap-cli --zap-url http://0.0.0.0 -p 1001 spider ${TEST_URL}
 # zap-cli --zap-url http://0.0.0.0 -p 1001 active-scan --scanners all --recursive "${TEST_URL}"
 # zap-cli --zap-url http://0.0.0.0 -p 1001 report -o activescan.html -f html
-  zap-full-scan.py -p 1001 -d -a -r report2.html -t "${TEST_URL}"
+  zap-full-scan.py -P 1001 -a -d -r report2.html -t "${TEST_URL}"
  # su -s /bin/bash zap 
  # echo $(whoami)
  # zap-cli --zap-url http://0.0.0.0 -p 1001 ajax-spider ${TEST_URL}

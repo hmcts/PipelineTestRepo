@@ -13,18 +13,18 @@ String component = "pfe"
 
 def type = "nodejs"
 
-List<LinkedHashMap<String, Object>> secrets = [
-        secret('securitycontext', 'SECURITYCONTEXT'),
-]
+//List<LinkedHashMap<String, Object>> secrets = [
+//        secret('securitycontext', 'SECURITYCONTEXT'),
+//]
 
-static LinkedHashMap<String, Object> secret(String secretName, String envVar) {
-    [ $class: 'AzureKeyVaultSecret',
-      secretType: 'Secret',
-      name: secretName,
-      version: '',
-      envVariable: envVar
-    ]
-}
+// static LinkedHashMap<String, Object> secret(String secretName, String envVar) {
+//    [ $class: 'AzureKeyVaultSecret',
+//      secretType: 'Secret',
+//      name: secretName,
+//      version: '',
+//      envVariable: envVar
+//    ]
+// }
 
     withNightlyPipeline(type, product, component) {
         //loadVaultSecrets(secrets)

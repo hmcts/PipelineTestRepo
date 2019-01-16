@@ -27,8 +27,8 @@ static LinkedHashMap<String, Object> secret(String secretName, String envVar) {
 }
 
     withNightlyPipeline(type, product, component) {
-        loadVaultSecrets(secrets)
-        setVaultName('probate-saat') 
+        //loadVaultSecrets(secrets)
+        // setVaultName('probate-saat') 
         env.TEST_URL = 'https://div-pfe-aat.service.core-compute-aat.internal'
         enableSecurityScan()
 

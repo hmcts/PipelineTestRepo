@@ -19,22 +19,6 @@ while !(curl -s http://0.0.0.0:1001) > /dev/null
   # zap-cli --zap-url http://0.0.0.0 -p 1001 report -o ajaxspider.html -f html
   echo 'Changing owner from $(id -u):$(id -g) to $(id -u):$(id -u)'
   chown -R $(id -u):$(id -u) activescan.html
-  curl --fail $PROXY_URL/OTHER/core/other/jsonreport/?formMethod=GET --output report.json
+  curl --fail http://0.0.0.0:1001/OTHER/core/other/jsonreport/?formMethod=GET --output report.json
   cp *.html functional-output/
   zap-cli -p 1001 alerts -l Informational
-  jq '{ "@name" : .site."@name",
-  "alerts": 
-  [.site.alerts[] as $in 
-  | $in.instances[] as $h 
-  | $in
-  | $h * $in
-  | {
-      "description": $in.desc, 
-      "source": "URI: \($h.uri) Method: \($h.method)",
-      "detail": "\($in.name) \n Evidence: \($h.evidence) \n Solution: \($in.solution) \n Other info: \($in.otherinfo) \n Reference: \($in.reference)",
-      "severity": $in.riskdesc | split(" ") | .[0],
-      "fingerprint": "\($in.pluginid)_\($h.uri)_\($h.method)" 
-    }
-  ]
-} ' report.json > output.json
-

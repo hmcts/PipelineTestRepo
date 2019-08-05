@@ -29,7 +29,7 @@ def type = "nodejs"
     withNightlyPipeline(type, product, component) {
         //loadVaultSecrets(secrets)
         //setVaultName('probate-saat') 
-        env.TEST_URL = 'https://idam-web-admin-idam-demo.service.core-compute-idam-demo.internal'
+        env.TEST_URL = 'https://idam-web-admin-idam-aat.service.core-compute-idam-aat.internal'
         enableSecurityScan()
 
     }

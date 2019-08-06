@@ -1,0 +1,8 @@
+{
+  "ZAPhttp://www.dvwa.co.uk Browser XSS Protection Not Enabled X-XSS-Protection": "ignore",
+  "ZAPhttp://www.dvwa.co.uk/sitemap.xml Browser XSS Protection Not Enabled X-XSS-Protection": "ignore",
+  "ZAPhttp://www.dvwa.co.uk/robots.txt Browser XSS Protection Not Enabled X-XSS-Protection": "ignore",
+  "ZAPhttp://www.dvwa.co.uk/index.php Browser XSS Protection Not Enabled X-XSS-Protection": "ignore",
+  "ZAPhttp://www.dvwa.co.uk/css/lt7.css X-Content-Type-Options Header Missing X-Content-Type-Options": "ignore",
+  "ZAPhttp://www.dvwa.co.uk X-Frame-Options Header Not Set X-Frame-Options":"ignore"
+}

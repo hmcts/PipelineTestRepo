@@ -1,24 +1,6 @@
 {
-  "ZAPhttp://www.dvwa.co.uk/ X-Frame-Options Header Not Set": "ignore",
-  "ZAPhttp://www.dvwa.co.uk/index.php  X-Frame-Options Header Not Set": "ignore",
-  "ZAPhttp://www.dvwa.co.uk/  Web Browser XSS Protection Not Enabled": "ignore",
-  "ZAPhttp://www.dvwa.co.uk/ X-Content-Type-Options Header Missing": "ignore",
-  "ZAPhttp://www.dvwa.co.uk/robots.txt Web Browser XSS Protection Not Enabled": "ignore",
-  "ZAPhttp://www.dvwa.co.uk/sitemap.xml Web Browser XSS Protection Not Enabled": "ignore",
-  "ZAPhttp://www.dvwa.co.uk/index.php Web Browser XSS Protection Not Enabled": "ignore",
-  "ZAPhttp://www.dvwa.co.uk/favicon.ico X-Content-Type-Options Header Missing": "ignore",
-  "ZAPhttp://www.dvwa.co.uk/css/all.css X-Content-Type-Options Header Missing": "ignore",
-  "ZAPhttp://www.dvwa.co.uk/css/nivo-slider.css X-Content-Type-Options Header Missing": "ignore",
-  "ZAPhttp://www.dvwa.co.uk/nivo-slider/themes/default/default.css X-Content-Type-Options Header Missing": "ignore",
-  "ZAPhttp://www.dvwa.co.uk/css/lt7.css X-Content-Type-Options Header Missing": "ignore",
-  "ZAPhttp://www.dvwa.co.uk/js/jquery-1.6.2.min.js X-Content-Type-Options Header Missing": "ignore",
-  "ZAPhttp://www.dvwa.co.uk/images/slider1.png X-Content-Type-Options Header Missing": "ignore",
-  "ZAPhttp://www.dvwa.co.uk/images/slider2.png X-Content-Type-Options Header Missing": "ignore",
-  "ZAPhttp://www.dvwa.co.uk/images/slider3.png X-Content-Type-Options Header Missing": "ignore",
-  "ZAPhttp://www.dvwa.co.uk/images/buttons/download.png X-Content-Type-Options Header Missing": "ignore",
-  "ZAPhttp://www.dvwa.co.uk/images/buttons/source.png X-Content-Type-Options Header Missing": "ignore",
-  "ZAPhttp://www.dvwa.co.uk/images/buttons/bugs.png X-Content-Type-Options Header Missing": "ignore",
-  "ZAPhttp://www.dvwa.co.uk/js/jquery.nivo.slider.pack.js X-Content-Type-Options Header Missing": "ignore",
-  "ZAPhttp://www.dvwa.co.uk/images/buttons/wiki.png X-Content-Type-Options Header Missing": "ignore",
-  "ZAPhttp://www.dvwa.co.uk/js/jquery-1.6.2.min.js Information Disclosure - Suspicious Comments": "ignore"
+  "ZAPhttp://www.dvwa.co.uk/Web Browser XSS Protection Not EnabledX-XSS-Protection": "ignore",
+  "ZAPhttp://www.dvwa.co.uk/robots.txt Web Browser XSS Protection Not EnabledX-XSS-Protection": "ignore",
+  "ZAPhttp://www.dvwa.co.uk/sitemap.xml Web Browser XSS Protection Not EnabledX-XSS-Protection": "ignore",
+  "ZAPhttp://www.dvwa.co.uk/index.php Web Browser XSS Protection Not EnabledX-XSS-Protection": "ignore"
 }

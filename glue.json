@@ -2,5 +2,7 @@
   "ZAPhttp://www.dvwa.co.uk/Web Browser XSS Protection Not EnabledX-XSS-Protection": "ignore",
   "ZAPhttp://www.dvwa.co.uk/robots.txt Web Browser XSS Protection Not EnabledX-XSS-Protection": "ignore",
   "ZAPhttp://www.dvwa.co.uk/sitemap.xml Web Browser XSS Protection Not EnabledX-XSS-Protection": "ignore",
-  "ZAPhttp://www.dvwa.co.uk/index.php Web Browser XSS Protection Not EnabledX-XSS-Protection": "ignore"
+  "ZAPhttp://www.dvwa.co.uk/index.php Web Browser XSS Protection Not EnabledX-XSS-Protection": "ignore",
+  "ZAPhttp://www.dvwa.co.uk/index.php X-Frame-Options Header Not SetX-Frame-Options": "ignore",
+  "ZAPhttp://www.dvwa.co.uk/X-Frame-Options Header Not SetX-Frame-Options": "ignore"
 }

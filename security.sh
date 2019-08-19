@@ -13,7 +13,7 @@ while !(curl -s http://0.0.0.0:1001) > /dev/null
   zap-cli --zap-url http://0.0.0.0 -p 1001 open-url "${TEST_URL}"
   zap-cli --zap-url http://0.0.0.0 -p 1001 context import /zap/security.context
   zap-cli --zap-url http://0.0.0.0 -p 1001 spider ${TEST_URL}
-  zap-cli --zap-url http://0.0.0.0 -p 1001 active-scan --scanners all --recursive "${TEST_URL}"
+  zap-cli --zap-url http://0.0.0.0 -p 1001 active-scan -l Medium --scanners all --recursive "${TEST_URL}"
   zap-cli --zap-url http://0.0.0.0 -p 1001 report -o activescan.html -f html
   # zap-cli --zap-url http://0.0.0.0 -p 1001 ajax-spider ${TEST_URL}
   # zap-cli --zap-url http://0.0.0.0 -p 1001 report -o ajaxspider.html -f html

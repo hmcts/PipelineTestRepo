@@ -1,8 +1,8 @@
 {
-  "ZAPhttp://www.dvwa.co.uk/Web Browser XSS Protection Not EnabledX-XSS-Protection": "ignore",
-  "ZAPhttp://www.dvwa.co.uk/robots.txt Web Browser XSS Protection Not EnabledX-XSS-Protection": "ignore",
-  "ZAPhttp://www.dvwa.co.uk/sitemap.xml Web Browser XSS Protection Not EnabledX-XSS-Protection": "ignore",
-  "ZAPhttp://www.dvwa.co.uk/index.php Web Browser XSS Protection Not EnabledX-XSS-Protection": "ignore",
-  "ZAPhttp://www.dvwa.co.uk/index.php X-Frame-Options Header Not SetX-Frame-Options": "ignore",
-  "ZAPhttp://www.dvwa.co.uk/X-Frame-Options Header Not SetX-Frame-Options": "ignore"
+  "OWASPZaproxyhttp://www.dvwa.co.uk/Web Browser XSS Protection Not EnabledX-XSS-Protection": "ignore",
+  "OWASPZaproxyhttp://www.dvwa.co.uk/robots.txtWeb Browser XSS Protection Not EnabledX-XSS-Protection": "ignore",
+  "OWASPZaproxyhttp://www.dvwa.co.uk/sitemap.xmlWeb Browser XSS Protection Not EnabledX-XSS-Protection": "ignore",
+  "OWASPZaproxyhttp://www.dvwa.co.uk/index.phpWeb Browser XSS Protection Not EnabledX-XSS-Protection": "ignore",
+  "OWASPZaproxyhttp://www.dvwa.co.uk/index.phpX-Frame-Options Header Not SetX-Frame-Options": "ignore",
+  "OWASPZaproxyhttp://www.dvwa.co.uk/X-Frame-Options Header Not SetX-Frame-Options": "ignore"
 }

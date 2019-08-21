@@ -1,8 +1,8 @@
 {
-  "OWASPZaproxyhttp://www.dvwa.co.uk/Web Browser XSS Protection Not EnabledX-XSS-Protection": "ignore",
-  "OWASPZaproxyhttp://www.dvwa.co.uk/robots.txtWeb Browser XSS Protection Not EnabledX-XSS-Protection": "ignore",
-  "OWASPZaproxyhttp://www.dvwa.co.uk/sitemap.xmlWeb Browser XSS Protection Not EnabledX-XSS-Protection": "ignore",
-  "OWASPZaproxyhttp://www.dvwa.co.uk/index.phpWeb Browser XSS Protection Not EnabledX-XSS-Protection": "ignore",
-  "OWASPZaproxyhttp://www.dvwa.co.uk/index.phpX-Frame-Options Header Not SetX-Frame-Options": "ignore",
-  "OWASPZaproxyhttp://www.dvwa.co.uk/X-Frame-Options Header Not SetX-Frame-Options": "ignore"
+  "Zaproxyhttp://www.dvwa.co.uk/Web Browser XSS Protection Not EnabledX-XSS-Protection": "ignore",
+  "Zaproxyhttp://www.dvwa.co.uk/robots.txtWeb Browser XSS Protection Not EnabledX-XSS-Protection": "ignore",
+  "Zaproxyhttp://www.dvwa.co.uk/sitemap.xmlWeb Browser XSS Protection Not EnabledX-XSS-Protection": "ignore",
+  "Zaproxyhttp://www.dvwa.co.uk/index.phpWeb Browser XSS Protection Not EnabledX-XSS-Protection": "ignore",
+  "Zaproxyhttp://www.dvwa.co.uk/index.phpX-Frame-Options Header Not SetX-Frame-Options": "ignore",
+  "Zaproxyhttp://www.dvwa.co.uk/X-Frame-Options Header Not SetX-Frame-Options": "ignore"
 }

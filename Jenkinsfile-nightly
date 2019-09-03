@@ -31,5 +31,6 @@ def type = "nodejs"
         //setVaultName('probate-saat') 
         env.TEST_URL = 'http://www.dvwa.co.uk/'
         enableSecurityScan()
+        enableSlackNotifications('')
 
     }

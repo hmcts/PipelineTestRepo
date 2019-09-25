@@ -1,6 +1,6 @@
 {
   "10016_Web Browser XSS Protection Not Enabled_http://www.dvwa.co.uk/_GET": "ignore",
-  "10016_Web Browser XSS Protection Not Enabled_http://www.dvwa.co.uk/sitemap.xml_GET": "new",
+  "10016_Web Browser XSS Protection Not Enabled_http://www.dvwa.co.uk/sitemap.xml_GET": "ignore",
   "10016_Web Browser XSS Protection Not Enabled_http://www.dvwa.co.uk/robots.txt_GET": "ignore",
   "10016_Web Browser XSS Protection Not Enabled_http://www.dvwa.co.uk/index.php_GET": "ignore",
   "10021_X-Content-Type-Options Header Missing_http://www.dvwa.co.uk/css/lt7.css_GET": "ignore",

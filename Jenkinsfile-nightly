@@ -27,10 +27,11 @@ def type = "nodejs"
 // }
 
     withNightlyPipeline(type, product, component) {
+        enableSlackNotifications('')
         //loadVaultSecrets(secrets)
         //setVaultName('probate-saat') 
         env.TEST_URL = 'http://www.dvwa.co.uk/'
         enableSecurityScan()
-        enableSlackNotifications('')
+        
 
     }

@@ -9,7 +9,8 @@ while !(curl -s http://0.0.0.0:1001) > /dev/null
     sleep .1
   done
   echo "ZAP has successfully started"
-  unset LC_ALL
+  export LC_ALL=C.UTF-8
+  export LANG=C.UTF-8 
   zap-cli --zap-url http://0.0.0.0 -p 1001 status -t 120
   zap-cli --zap-url http://0.0.0.0 -p 1001 open-url "${TEST_URL}"
   zap-cli --zap-url http://0.0.0.0 -p 1001 context import /zap/security.context

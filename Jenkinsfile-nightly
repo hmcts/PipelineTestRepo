@@ -7,7 +7,7 @@ properties([
 
 library "Infrastructure@${params.LIB_VERSION}"
 
-String product = ""
+String product = "cnp"
 
 String component = "pfe"
 

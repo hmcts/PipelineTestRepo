@@ -139,7 +139,7 @@
     "mocha-multi": "^1.0.1",
     "mochawesome": "^3.0.2",
     "nock": "9.2.6",
-    "node-sass": "^4.0.0",
+    "node-sass": "^4.13.1",
     "nyc": "12.0.2",
     "pa11y": "^4.0.1",
     "pre-commit": "^1.1.3",

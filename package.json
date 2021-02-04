@@ -106,7 +106,7 @@
     "webpack-archive-plugin": "^3.0.0",
     "weighted": "0.3.0",
     "xss-filters": "^1.2.7",
-    "yarn": "^1.5.1"
+    "yarn": "^1.22.10"
   },
   "devDependencies": {
     "@hmcts/div-idam-test-harness": "https://github.com/hmcts/div-idam-test-harness#1.0.12",
